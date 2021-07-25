@@ -1,0 +1,17 @@
+{
+  "name": "livetalkism",
+  "version": "1.0.0",
+  "description": "It is a official website for podcast club of IIT(ISM) DHANBAD ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mejar kumar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "mongoose": "^5.13.3",
+    "nodemon": "^2.0.12",
+    "passport-local-mongoose": "^6.1.0"
+  }
+}
