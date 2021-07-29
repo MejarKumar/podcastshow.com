@@ -1,5 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<%- include('./partials/header'); -%>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@500&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <title>LiveTalkISM</title>
+</head>
 
-<h2>Welcome to home page admin</h2>
-<a href="/admin/login" class="btn btn-danger">logout</a>
+<body>
+
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                LiveTalkISM
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/guestSpeakers.html">Guest Speakers</a></li>
+                            <li><a class="dropdown-item" href="/teamMembers.html">Team Members</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contactUs">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ----------------------------------------------------------- -->
+    <%- include('./partials/header'); -%>
+        <h2>Welcome to home page admin</h2>
+        <a href="/admin/login" class="btn btn-danger">logout</a>
+        <!----------------------------------------------------------->
+        <br>
+        <div class="container pt-2">
+            <div class="h1 title" style="color: #036F31;">About Us</div> <br>
+            <div class="content">LiveTalksISM includes entertainment as well as leaves a roadmap for the young minds.
+                <br><br> <em>LiveTalksISM</em>- A podcast show exclusively for IIT ISM people featuring conversations
+                with
+                professors, alumni and students on their life experiences and stories about IIT ISM and also the
+                audience will be getting to know what are the right things one should do in their college life to
+                make it more memorable and useful. This podcast will also feature talk sessions with famous
+                celebrities and influencers, wherein they get to share some of their amazing life experiences
+                and learnings.
+                <br><br> As part of our future expansion plan we also plan to identify prevalent issues in society,
+                advancements in tech, problems of students and do a podcast with relevant experts or
+                professors.Shortly we plan to launch.founders unfiltered series where we'll be bringing founders
+                of enterprises from our own college as well as other colleges and engage in a freewheeling chat
+                about their journey and their stories <br>Overall it's supposed to be a free flowing conversation which
+                offers a mix of <strong>entertainment,
+                    information and inspiration</strong> to our listeners. <br><br><strong> Our Social Media
+                    handles:</strong><br>
+                <div><i class="bi bi-instagram"></i> Instagram - <a
+                        href="https://www.instagram.com/_livetalksism_/">@_livetalks_ism</a></div>
+                <div><i class="bi bi-facebook"></i> Facebook - <a
+                        href="https://www.facebook.com/livetalksISM/posts">Live Talks ISM</a></div>
+                <div><i class="bi bi-youtube"></i> Youtube - <a
+                        href="https://www.youtube.com/channel/UCGXQkO9x8BCkPolMsnzGWqg">LiveTalksISM</a></div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+        <br>
+        <div class="speakerContainer">
+            <div class="h3 pt-3 text-center speakerContainerTitle title">Our Previous Speakers</div>
+            <div class="container p-3 d-flex flex-row justify-content-center flex-wrap">
+                <div><img class="speakerImg" src="/public/uploads/images/ayushdinker.jpg" alt="">
+                    <div class="content text-center" style="color: white;">Ayush Dinker</div>
+                </div>
+                <div><img class="speakerImg" src="/public/uploads/images/stutichangle.jpg" alt="">
+                    <div class="content text-center" style="color: white;">Stuti Changle
+                    </div>
+                </div>
+                <div><img class="speakerImg" src="/public/uploads/images/shibanikashyap.jpg" alt="">
+                    <div class="content text-center" style="color: white;">Shibani Kashyap</div>
+                </div>
+                <div><img class="speakerImg" src="/public/uploads/images/rajivshekhar.jpg" alt="">
+                    <div class="content text-center" style="color: white;">Mr. Rajiv Shekhar</div>
+                </div>
+            </div>
+            <div class="text-center speakerContainerBtnBox"><button class="speakerContainerBtn"
+                    onclick="location.href = '/guestlist.ejs';">VIEW ALL</button></div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="pt-2 row">
+                <div class="h1 text-center" style="color: #036F31;">LiveTalkISM Shows</div>
+
+                <div class="col-lg-4 my-2" style="text-align: center;">
+                    <img src="/public/uploads/images/saturdaySuspense.jpeg"
+                        style="height: 300px; width: 300px; border-radius: 6px; text-align:center;" alt="">
+                </div>
+                <div class="col-lg-8 container">
+                    <div><em>LiveTalksISM</em>- A podcast show exclusively for IIT ISM people featuring conversations
+                        with
+                        professors, alumni and students on their life experiences and stories about IIT ISM and also the
+                        audience will be getting to know what are the right things one should do in their college life
+                        to
+                        make it more memorable and useful. This podcast will also feature talk sessions with famous
+                        celebrities and influencers, wherein they get to share some of their amazing life experiences
+                        and learnings.
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="speakerContainer">
+            <div class="h3 pt-3 text-center speakerContainerTitle title">Team members</div>
+            <div class="container p-3 d-flex flex-row justify-content-center flex-wrap">
+                <div><img class="speakerImg" src="/public/uploads/images/snigdhkatiyar.jpg" alt="">
+                    <div class="content text-center" style="color: white;">Snigdh Katiyar</div>
+                </div>
+                <div><img class="speakerImg" src="/public/uploads/images/harshalverma.jpg" alt="">
+                    <div class="content text-center" style="color: white;">Harshal Verma</div>
+                </div>
+                <div><img class="speakerImg" src="/public/uploads/WhatsApp Image 2021-07-24 at 11.02.36 PM.jpeg" alt="">
+                    <div class="content text-center" style="color: white;">Devansh Kumar</div>
+                </div>
+                <div><img class="speakerImg" src="/public/uploads/WhatsApp Image 2021-07-24 at 11.02.36 PM.jpeg" alt="">
+                    <div class="content text-center" style="color: white;">Shailesh Kumar</div>
+                </div>
+            </div>
+            <div class="text-center speakerContainerBtnBox"><button class="speakerContainerBtn"
+                    onclick="location.href = '/teamlist.ejs';">VIEW ALL</button></div>
+        </div>
+        <!-- ----------------------------------------------------------- -->
+        <div class="footerLinks d-flex flex-row justify-content-around">
+            <div class="specialLinksSection m-3 p-3">
+                <h4>Links</h4>
+                <br>
+                <div>Link 1</div>
+                <div>Link 2</div>
+                <div>Link 3</div>
+            </div>
+            <div class="contactUsSection m-3 p-3" id="contactUs">
+                <h4>| Contact us :</h4>
+                <br>
+                <div><i class="bi bi-facebook"></i> <a class="plainAnchor"
+                        href=" https://www.facebook.com/livetalksISM/posts">Facebook </a></div>
+                <div><i class="bi bi-instagram"></i> <a href="https://www.instagram.com/_livetalksism_/">Instagram</a>
+                </div>
+                <div><i class="bi bi-youtube"></i><a href="https://www.youtube.com/channel/UCGXQkO9x8BCkPolMsnzGWqg">
+                        Youtube</a></div>
+                <div><i class="bi bi-envelope"></i> Email : test@test.com</div>
+            </div>
+        </div>
+</body>
+
+</html>
