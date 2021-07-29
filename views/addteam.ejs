@@ -1,0 +1,16 @@
+<%- include('./partials/header'); -%>
+
+<div class="container m-3 p-2">
+
+
+<form action="/admin/addteam" method="POST" enctype="multipart/form-data">
+
+<input class="form-control" type="text" placeholder="Team member name" name="nameOfMember">
+<input class="form-control" type="text" placeholder="Role of Member" name="roleOfMember">
+<input type="text" class="form-control" type="text" placeholder="Branch of Member" name="branchOfMember">
+<input type="text" class="form-control" type="text" placeholder="Admission Number" name="admission_number">
+<input  class="form-control" type="file" name="teamImage" id="teamImage" placeholder="Image of team Member">
+<button type="submit" class="btn btn-success">Add Team</button>
+</form>
+
+</div>

@@ -5,7 +5,12 @@ const flash = require("connect-flash");
 const passport = require("passport")
 const bcrypt = require("bcryptjs")
 const db = require("../config/db")
-const {ensureAuth} = require("../middleware/auth")
+const {ensureAuth} = require("../middleware/auth");
+const Guest = require("../model/guest")
+const Team = require("../model/team")
+
+
+
 
 router.get("/signup", (req, res) => {
     res.render("signup");
@@ -18,6 +23,36 @@ router.get("/login", (req, res) => {
 router.get("/",ensureAuth, (req, res) => {
    res.render("home")
 })
+router.get("/addguest",ensureAuth, (req, res) => {
+   res.render("addguest");
+})
+router.get("/guestlist",(req,res)=>{
+    Guest.find({},(err,items)=>{
+        if(items){
+            res.render("guestlist", {items})
+            console.log(items);
+        }else{
+            res.send("there is no guest till now..")
+        }
+    })
+})
+router.get("/teamlist",(req,res)=>{
+    Team.find({},(err,items)=>{
+        if(items){
+            res.render("teamlist", {items})
+            // console.log(items);
+        }else{
+            res.send("there is no guest till now..")
+        }
+    })
+})
+
+
+
+router.get("/addteam",(req,res)=>{
+    res.render("addteam")
+})
+
 
 
 

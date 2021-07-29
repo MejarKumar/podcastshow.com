@@ -1,0 +1,15 @@
+<%- include('./partials/header'); -%>
+
+<div class="container m-3 p-2">
+
+
+<form action="/admin/addguest" method="POST" enctype="multipart/form-data" >
+
+<input class="form-control" type="text" placeholder="Guest name" name="guestName">
+<input class="form-control" type="text" placeholder="Profession" name="profession">
+<input  class="form-control" type="url" name="podcastLink" id="podcastLink" placeholder="Podcast Link">
+<input  class="form-control" type="file" name="guestImage" id="guestImage" placeholder="Image of Guest">
+<button type="submit" class="btn btn-success">Add Guest</button>
+</form>
+
+</div>

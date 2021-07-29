@@ -1,0 +1,10 @@
+
+     <%- include('./partials/message'); -%>
+<h2>All the Guest list</h2>
+<ul>
+    <% items.forEach(function(user){ %>
+     <h4><%= user.username %> </h4>
+     <h4><%= user.profession %> </h4>
+    <img src="../uploads/<%= user.guest_img %> " alt="" style="width: 10%;" draggable="false">
+    <% }); %>
+  </ul>

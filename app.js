@@ -9,12 +9,14 @@ const mongoose = require("mongoose");
 const session = require("express-session")
 const passport = require("passport");
 const MongoStore = require("connect-mongo");
+const multer = require("multer")
 const flash = require("connect-flash")
 const passwordLocalMongoose= require("passport-local-mongoose");
 const connectDB = require("./config/db")
 require('./config/passport')(passport);
 
-
+const Guest =require("./model/guest")
+const Team = require("./model/team")
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -45,12 +47,69 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+// SET STORAGE
+var storage = multer.diskStorage({
+  destination:"./public/uploads",
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+})
+ 
+var upload = multer({ storage: storage,
+// fileFilter:(req,file,cb)=>{
+// checkFileType(file,cb);
+// }
+})
+
+//  function checkFileType(file,cb){
+// const filetypes = /jpeg| jpg| png| gif/; 
+// const extname =filetypes.test(path.extname(file.originalname).toLowerCase());
+// const mimetype = filetypes.test(file.mimetype)
+
+// if(extname && mimetype){
+//     return cb(null, true);
+// }else{
+// cb('Error: Images only!')
+// }
+// }
 
 // routes
-app.use('/',require("./routes/guest"));
+app.use('/',require("./routes/user"));
 app.use('/admin',require("./routes/admin"));
 
 
+
+
+app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
+    const newGuest = new Guest({
+        username: req.body.guestName,
+        profession: req.body.profession,
+        podcastLink: req.body.podcastLink,
+        guest_img: req.file.filename
+    });
+    await newGuest.save();
+    console.log(newGuest);
+    
+    res.redirect("/admin/guestlist")
+    
+    })
+
+    app.post("/admin/addteam", upload.single('teamImage'),async (req,res,next)=>{
+        const newTeam = new Team({
+            username: req.body.nameOfMember,
+            role: req.body.roleOfMember,
+            branch: req.body.branchOfMember,
+            admission_number: req.body.admission_number,
+       
+        });
+        
+        await newTeam.save();
+        // console.log(newTeam);
+        console.log(req.file);
+        res.redirect("/admin/teamlist")
+        
+        })
+        
 
 app.listen(3000,(req,res)=>{
     console.log("the server is running on the port 3000");

@@ -19,11 +19,8 @@ var AdminSchema = new Schema({
   
 
 // plugin for passport-local-mongoose 
-
 AdminSchema.plugin(passportLocalMongoose); 
 
   
-
 // exporting the userschema 
-
  module.exports = mongoose.model("Admin", AdminSchema);
