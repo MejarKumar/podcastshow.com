@@ -7,7 +7,19 @@ body{
     padding: 0px;
 /* background: #262626; */
 }
-
+.gradient{
+    font-size: 60px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @supports (-webkit-text-stroke: 1px black) {
+    .gradient{
+      -webkit-text-stroke: 1px white;
+      /* -webkit-text-fill-color: white; */
+    }
+  }
 .parallex {
     font-family: 'PT Sans', sans-serif;
     background: linear-gradient( 
@@ -47,10 +59,9 @@ padding-bottom: 25px;
 
 .container .box{
     position: relative;
-    height: 220px;
-    width: 220px;
-    /* background: #ff0; */
-    margin: 15px;
+    height: 180px;
+    width: 180px;
+    margin: 25px;
     box-sizing: border-box;
     display: inline-block;
     
@@ -58,7 +69,7 @@ padding-bottom: 25px;
     .container .box .imgBox{
        position: relative;
        overflow: hidden;
-       border-radius: 50%;
+       border-radius: 10%;
     }
     .container .box .imgBox img{
         max-width: 100%;
@@ -68,7 +79,7 @@ padding-bottom: 25px;
     }
 
   .container .box:hover .imgBox img{
-      transform: scale(1.2);
+      transform: scale(1.1);
       cursor: pointer;
   }
   /* .container .box .details{
@@ -106,40 +117,48 @@ transition: transform .4s;
 .about-guest{
     line-height: 21px;
     color: cornsilk;
+    min-height: 65px;
+    height: 42px;
 }
 #guest-name{
- 
         color: aliceblue;
         font-family: 'Oxygen';
 }
+.footer-section{
+    background-color: #003638;
+    color: white;
+    padding: 30px;
+}
 .description{
-   
         display: block;
         padding-top: 19px;
-
 }
+
 .podcastLink {
-    padding: 5px;
-    background-color: #3B5249;
+    margin: 10px;
+    padding: 10px;
+    background-color: #CDCDCD;
     width: fit-content;
     margin: auto;
-    border-radius: 10px;
-}
-.podcastLink a{
-
-        text-decoration: none;
-        color: #FF616D;
+    border-radius: 4px;
     
 }
+
+.podcastLink a{
+        text-decoration: none;
+        color: black;
+}
+
 .podcastLink a i{
     margin-right: 10px;
 }
+
 .allguestbtn a i{
     margin-right: 10px;
 }
 
 .podcastLink a:hover{
-    color: #7ae457;
+    transform:scale(1.1);
 }
 
 .allguestbtn , .allteambtn{
@@ -151,10 +170,12 @@ transition: transform .4s;
 
 
 .allguestbtn a, .allteambtn a{
-    color: #FF616D;
+    color: skyblue;
+    font-weight: 800;
     padding: 10px;
-    background-color:#3B5249;
+    box-shadow: 3px 3px 11px 2px darkolivegreen;
     text-decoration: none;
+    border-radius: 4px;
 }
 .allguestbtn a:hover, .allteambtn a:hover{
     color: #7ae457;
@@ -228,7 +249,7 @@ transition: transform .4s;
 
 @media(max-width:1214px){
     .container .box .imgBox img {
-        max-width: 80%;
+        max-width: 70%;
         transition: transform 1s;
         border-radius: 20px;
     }
@@ -274,7 +295,7 @@ transition: transform .4s;
     .container .box:hover .details {
         transform: scale(1);
         cursor: pointer;
-        width: 91%;
-        height: 77%;
+        width: 71%;
+        height: 79%;
     }
 }

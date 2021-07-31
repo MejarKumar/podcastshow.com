@@ -18,7 +18,7 @@
                     <div class="col-lg-8">
 
                         <h2>Feel the motivation and adventure</h2>
-                        <h1>LIVE TALK ISM</h1>
+                        <h1 class="gradient">LIVE TALK ISM</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio reiciendis est
                             quibusdam
                             consequatur cumque accusantium, quod modi praesentium similique libero dolores quam porro
@@ -97,17 +97,12 @@
             <div class="container">
                 <div class="row">
                     <% guestsItem.forEach(function(item){ %>
-                        <div class="col-lg-4" id="guestItems">
-
+                        <div class="col-lg-4" style="padding: 25px;" id="guestItems">
                             <div class="box">
-
-
-
                                 <div class="imgBox">
                                     <img src="../uploads/<%= item.guest_img  %> " alt="guest image">
                                 </div>
                                 <div class="description">
-
                                     <h2 id="guest-name">
                                         <%= item.username %>
                                     </h2>
@@ -121,34 +116,28 @@
                                             Podcast</a>
                                     </div>
                                 </div>
-
                             </div>
-
-
                         </div>
                         <% }) %>
                 </div>
-
                 <div class="allguestbtn">
                     <a href=""><i class="fas fa-border-all"></i> All Guests</a>
                 </div>
-
             </div>
-
         </div>
 
         <!-- video clip section  -->
         <div class="video-clip-section">
-            <h2 class="heading" style="    color: currentcolor;">Moments </h2>
+            <h2 class="heading" style="color: currentcolor;">Moments </h2>
             <div class="row">
-                <div class="col-lg-6" id="VideoItem">
-                    <iframe id="videoClip" width="420" height="345"
-                        src="https://www.youtube.com/embed/cyzCmbhUoZY?autoplay=1&mute=1">
+                <div class="col-lg-6" style="padding: 10px;" id="VideoItem">
+                    <iframe style="border-radius: 20px; box-shadow: 3px 3px 11px 2px ghostwhite;" width="420"
+                        height="345" src="https://www.youtube.com/embed/cyzCmbhUoZY">
                     </iframe>
                 </div>
-                <div class="col-lg-6" id="VideoItem">
-                    <iframe style="border-radius: 10px;" width="420" height="345"
-                        src="https://www.youtube.com/embed/biBndDKELm8?autoplay=1&mute=1&loop=1">
+                <div class="col-lg-6" style="padding: 10px;" id="VideoItem">
+                    <iframe style="border-radius: 20px; box-shadow: 3px 3px 11px 2px ghostwhite;" width="420"
+                        height="345" src="https://www.youtube.com/embed/biBndDKELm8">
                     </iframe>
                 </div>
 
@@ -191,40 +180,62 @@
             </div>
         </div> -->
 
-
-
-
-        <!-- footer section  -->
-        <div class="footer-section">
+        <!-- footer section -->
+        <div class="footer-section flex-row justify-content-around">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="left-side">
-                        <div class="teamNumber">
-                            <i class="fas fa-users"></i>
-                            <div class="text-part">
-                                <p>20</p>
-                                <p>Members</p>
+                <div class="col-md-6" style="padding: 30px;">
+                    <div class="h3">Numbers</div>
+                    <div class="row d-flex flex-row justify-content-around">
+                        <div class="col-6">
+                            <div class="teamNumber">
+                                <div class="text-part">
+                                    <div style="font-size: 50px;" class="counter-count">20</div>
+                                    <p>Members</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="guestNumber">
-                            <img style="width: 13%;" src="/img/man.png" alt="">
-                            <div class="text-part">
-                                <p>27</p>
-                                <p>Guests</p>
+                        <div class="col-6">
+                            <div class="guestNumber">
+                                <div class="text-part">
+                                    <div style="font-size: 50px;" class="counter-count">27</div>
+                                    <p>Guests</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
+
+                <div class="col-md-6" style="padding: 30px;">
                     <div class="contact-us-section">
-                        <div class="phone-email">
-                            <i class="fab fa-facebook-square"></i>
-                            <i class="fab fa-instagram-square"></i>
-                        </div>
+                        <div class="h3">Contact Us:</div>
+                        <br>
+                        <div class="h5"><i class="fab fa-facebook-square"></i> Facebook</div>
+                        <div class="h5"><i class="fab fa-instagram-square"></i> Instagram</div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            //check scroll bar is at bottom and add animation if scroll bar is at end
+            $(window).scroll(function () {
+                if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+                    $('.counter-count').each(function () {
+                        $(this).prop('Counter', 0).animate({
+                            Counter: $(this).text()
+                        }, {
+                            duration: 5000,
+                            easing: 'swing',
+                            step: function (now) {
+                                $(this).text(Math.ceil(now));
+                            }
+                        });
+                    });
+                }
+            });
+
+
+        </script>
 </body>
 
 </html>
