@@ -7,19 +7,7 @@ body{
     padding: 0px;
 /* background: #262626; */
 }
-.gradient{
-    font-size: 60px;
-    font-weight: 600;
-    background: -webkit-linear-gradient(blue, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  @supports (-webkit-text-stroke: 1px black) {
-    .gradient{
-      -webkit-text-stroke: 1px white;
-      /* -webkit-text-fill-color: white; */
-    }
-  }
+
 .parallex {
     font-family: 'PT Sans', sans-serif;
     background: linear-gradient( 
@@ -36,6 +24,23 @@ body{
     color: aliceblue;
     text-align:justify;
 }
+
+.gradient{
+    font-size: 60px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @supports (-webkit-text-stroke: 1px black) {
+    .gradient{
+        -webkit-text-stroke: 1px #dbfdd0;
+      /* -webkit-text-fill-color: white; */
+    }
+  }
+
+
+
 .grid-section{
     background-color:#003638;     
     padding: 3rem;
@@ -59,9 +64,10 @@ padding-bottom: 25px;
 
 .container .box{
     position: relative;
-    height: 180px;
-    width: 180px;
-    margin: 25px;
+    height: 220px;
+    width: 220px;
+    /* background: #ff0; */
+    margin: 15px;
     box-sizing: border-box;
     display: inline-block;
     
@@ -69,7 +75,7 @@ padding-bottom: 25px;
     .container .box .imgBox{
        position: relative;
        overflow: hidden;
-       border-radius: 10%;
+       border-radius: 75px;
     }
     .container .box .imgBox img{
         max-width: 100%;
@@ -79,86 +85,47 @@ padding-bottom: 25px;
     }
 
   .container .box:hover .imgBox img{
-      transform: scale(1.1);
+      transform: scale(1.2);
       cursor: pointer;
   }
-  /* .container .box .details{
-      position: absolute;
-top: 10px;
-right: 10px;
-left: 10px;
-bottom: 10px;
-background-color: rgb(19, 13, 11);
-color: rgba(255, 255, 255, 0.541);
-border-radius: 8px;
-transform: scale(0);
-transition: transform .4s;
-
-  }
-  .container .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: system-ui;
-    padding: 10px;
-  
-}
-.container .box .details .content h2{
-    color: rgb(13, 211, 73);
-}
-.container .box .details .content .aboutguest{
-    line-height: 7px;
-    padding-top: 15px;
-}
-.container .box:hover .details{
-    transform: scale(1);
-    cursor: pointer;
-} */
+ 
 .about-guest{
     line-height: 21px;
     color: cornsilk;
-    min-height: 65px;
-    height: 42px;
 }
 #guest-name{
+ 
         color: aliceblue;
         font-family: 'Oxygen';
 }
-.footer-section{
-    background-color: #003638;
-    color: white;
-    padding: 30px;
-}
 .description{
+   
         display: block;
         padding-top: 19px;
-}
 
+}
 .podcastLink {
-    margin: 10px;
-    padding: 10px;
-    background-color: #CDCDCD;
+    padding: 5px;
+    background-color: #3B5249;
     width: fit-content;
     margin: auto;
-    border-radius: 4px;
+    border-radius: 10px;
+}
+.podcastLink a{
+
+        text-decoration: none;
+        color: #b69e9e;
     
 }
-
-.podcastLink a{
-        text-decoration: none;
-        color: black;
-}
-
 .podcastLink a i{
     margin-right: 10px;
 }
-
 .allguestbtn a i{
     margin-right: 10px;
 }
 
 .podcastLink a:hover{
-    transform:scale(1.1);
+    color: #7ae457;
 }
 
 .allguestbtn , .allteambtn{
@@ -167,8 +134,6 @@ transition: transform .4s;
     align-items: center;
     padding: 1rem;
 }
-
-
 .allguestbtn a, .allteambtn a{
     color: skyblue;
     font-weight: 800;
@@ -180,6 +145,16 @@ transition: transform .4s;
 .allguestbtn a:hover, .allteambtn a:hover{
     color: #7ae457;
 }
+
+/* .allguestbtn a, .allteambtn a{
+    color: #FF616D;
+    padding: 10px;
+    background-color:#3B5249;
+    text-decoration: none;
+}
+.allguestbtn a:hover, .allteambtn a:hover{
+    color: #7ae457;
+} */
 /* aboutus-secton  */
 .about-us-section{
     background: #E0ECE4;
@@ -249,7 +224,7 @@ transition: transform .4s;
 
 @media(max-width:1214px){
     .container .box .imgBox img {
-        max-width: 70%;
+        max-width: 80%;
         transition: transform 1s;
         border-radius: 20px;
     }
@@ -295,7 +270,7 @@ transition: transform .4s;
     .container .box:hover .details {
         transform: scale(1);
         cursor: pointer;
-        width: 71%;
-        height: 79%;
+        width: 91%;
+        height: 77%;
     }
 }

@@ -22,7 +22,17 @@ var GuestSchema = new Schema({
     },
     rating:{
         type: Number
-    }
+    },
+    fbLink:{
+        type:String
+    },
+    instaLink:{
+        type:String
+    }  ,
+    linkedinLink:{
+        type:String
+    },
+
 }); 
 
 

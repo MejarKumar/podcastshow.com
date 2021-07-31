@@ -8,7 +8,7 @@ const connectDB = async() =>{
                 useUnifiedTopology:true,
                 useFindAndModify: false
             })
-             mongoose.set("useCreateIndex",true);
+            //  mongoose.set("useCreateIndex",true);
 console.log(`MongoDB connected: ${conn.connection.host}`);
 
     } catch (error) {

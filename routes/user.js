@@ -19,7 +19,9 @@ router.get("/", async (req, res) => {
 
 
 router.get("/core_team", (req, res) => {
-    res.send("Core team list")
+   Team.find({},(err,items)=>{
+     res.render("teamlist",{items})
+   })
 })
 router.get("/all_guest", (req, res) => {
   Guest.find({},(err, items)=>{

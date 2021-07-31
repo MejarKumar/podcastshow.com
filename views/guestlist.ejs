@@ -1,10 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
 
-     <%- include('./partials/message'); -%>
-<h2>All the Guest list</h2>
-<ul>
-    <% items.forEach(function(user){ %>
-     <h4><%= user.username %> </h4>
-     <h4><%= user.profession %> </h4>
-    <img src="../uploads/<%= user.guest_img %> " alt="" style="width: 10%;" draggable="false">
-    <% }); %>
-  </ul>
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>All the Guests</title>
+     <link rel="stylesheet" href="/css/guestlist.css">
+</head>
+
+<body>
+
+     <div class="all-guest-section">
+
+
+          <%- include('./partials/message'); -%>
+
+
+               <h2 id="heading">All the Guest list</h2>
+
+
+               <% items.forEach(function(user){ %>
+                    <div class="container " id="guestItem">
+                         <div class="pt-2 row">
+                              <div class="col-lg-3 my-2" style="text-align: center;">
+                                   <img src="../uploads/<%= user.guest_img %>"
+                                        style="height: 150px; width: 150px; border-radius: 75px; text-align:center;"
+                                        alt="">
+                                   <div class="h3 text-center my-2" style="color: #036F31;">
+                                        <h4>
+                                             <%= user.username %>
+                                        </h4>
+                                   </div>
+                                   <p style="color: #3b5a3b;">
+                                        <%= user.profession %>
+                                   </p>
+                              </div>
+                              <div class="col-lg-9 container">
+                                   <div style=" text-align: justify;">There is no passion to be found playing small-in
+                                        settling for a life that is less than the one you are
+                                        capable of living." A story of an engineer turned filmmaker who is driven by the
+                                        desire of his passion.
+                                        LiveTalksISM had our first guest Ayush Dinker. Ayush is the owner of travel
+                                        films platform Ethereal.
+                                        "A good traveler has no fixed plans and is not intent on arriving." The films
+                                        created at Ethereal are
+                                        travel films (not vlogs!) about a primary human emotion, and the whole narrative
+                                        revolves around
+                                        that concept. Ethereal recently clocked 5.7M views on its YouTube channel and is
+                                        going strong
+                                        further. Ayush has been at the forefront of this endeavour. He shared his
+                                        traveling experiences, life
+                                        changing moments and much much more on the very first episode of
+                                        #SaturdaySuspense. And this
+                                        episode received more than 2000 views
+                                   </div>
+                                   <br>
+                                   <div class="row">
+
+
+                                        <div class="col-lg-4" id="left-side">
+                                             <div class="h5">
+                                                  <a id="podcastLink" href="<%= user.podcastLink  %> "><i
+                                                            class="fas fa-podcast"></i> Watch Podcast</a>
+                                             </div>
+                                        </div>
+                                             <div class="col-lg-8" id="right-side">
+                                                  <h5>Follow him</h5>
+                                                  <div class="social-icon">
+                                                      <a  id="socialLink" href="<%= user.fbLink  %> "><i class="fab fa-facebook-square"></i></a>
+                                                      <a id="socialLink" href="<%= user.instaLink  %> "><i class="fab fa-instagram-square"></i></a>
+                                                      <a id="socialLink" href="<%= user.linkedinLink  %> "> <i class="fab fa-linkedin"></i></a>
+                                                  </div>
+                                             </div>
+                                     
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+                    <% }); %>
+     </div>
+</body>
+
+</html>

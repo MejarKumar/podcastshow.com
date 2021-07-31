@@ -61,17 +61,7 @@ var upload = multer({ storage: storage,
 // }
 })
 
-//  function checkFileType(file,cb){
-// const filetypes = /jpeg| jpg| png| gif/; 
-// const extname =filetypes.test(path.extname(file.originalname).toLowerCase());
-// const mimetype = filetypes.test(file.mimetype)
 
-// if(extname && mimetype){
-//     return cb(null, true);
-// }else{
-// cb('Error: Images only!')
-// }
-// }
 
 // routes
 app.use('/',require("./routes/user"));
@@ -86,7 +76,11 @@ app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
         profession: req.body.profession,
         podcastLink: req.body.podcastLink,
         guest_img: req.file.filename,
-        rating: req.body.guestRating
+        rating: req.body.guestRating,
+        fbLink:req.body.fbLink,
+        instaLink: req.body.instaLink,
+        linkedinLink: req.body.linkedinLink
+    
     });
     await newGuest.save();
     console.log(newGuest);

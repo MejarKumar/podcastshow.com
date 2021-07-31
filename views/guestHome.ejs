@@ -33,9 +33,9 @@
 
         <!-- About Club Section  -->
 
-        <div class="about-us-section">
-            <div class="container pt-2">
-                <div class="h1 title" style="color: #036F31;"><u> About Us</u></div> <br>
+        <div class="about-us-section" id="about-section">
+            <div class="container ">
+                <h2 class="heading" style="color: rgb(10, 82, 4);">Who we are </h2> 
                 <div class="contents">
                     <p>
                         <strong> LiveTalksISM includes entertainment as well as leaves a roadmap for the young
@@ -100,7 +100,7 @@
                         <div class="col-lg-4" style="padding: 25px;" id="guestItems">
                             <div class="box">
                                 <div class="imgBox">
-                                    <img src="../uploads/<%= item.guest_img  %> " alt="guest image">
+                                    <img src="../uploads/<%= item.guest_img  %> " alt="guest image"  style="height: 150px; width: 150px; border-radius: 75px; text-align:center;">
                                 </div>
                                 <div class="description">
                                     <h2 id="guest-name">
@@ -120,122 +120,33 @@
                         </div>
                         <% }) %>
                 </div>
-                <div class="allguestbtn">
+                <!-- <div class="allguestbtn">
                     <a href=""><i class="fas fa-border-all"></i> All Guests</a>
+                </div> -->
+                <div class="allguestbtn">
+                    <a href="/all_guest"><i class="fas fa-border-all"></i> All Guests</a>
                 </div>
             </div>
         </div>
 
         <!-- video clip section  -->
         <div class="video-clip-section">
-            <h2 class="heading" style="color: currentcolor;">Moments </h2>
+            <h2 class="heading" style="    color: currentcolor;">Moments </h2>
             <div class="row">
-                <div class="col-lg-6" style="padding: 10px;" id="VideoItem">
-                    <iframe style="border-radius: 20px; box-shadow: 3px 3px 11px 2px ghostwhite;" width="420"
-                        height="345" src="https://www.youtube.com/embed/cyzCmbhUoZY">
+                <div class="col-lg-6" id="VideoItem">
+                    <iframe id="videoClip" width="420" height="345"
+                        src="https://www.youtube.com/embed/cyzCmbhUoZY?autoplay=0&mute=1">
                     </iframe>
                 </div>
-                <div class="col-lg-6" style="padding: 10px;" id="VideoItem">
-                    <iframe style="border-radius: 20px; box-shadow: 3px 3px 11px 2px ghostwhite;" width="420"
-                        height="345" src="https://www.youtube.com/embed/biBndDKELm8">
+                <div class="col-lg-6" id="VideoItem">
+                    <iframe style="border-radius: 10px;" width="420" height="345"
+                        src="https://www.youtube.com/embed/biBndDKELm8?autoplay=0&mute=1&loop=1">
                     </iframe>
                 </div>
 
             </div>
         </div>
-
-
-
-
-        <!-- 
-         Team Member section  
-
-        <div class="team-section" style="    background: #0e633e; padding: 3rem;">
-
-            <h2 class="heading">Our Team Member </h2>
-            <div class="container">
-                <div class="row">
-                   
-                    <div class="col-lg-4" id="teamItems">
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="/img/Mejar1.jpg" alt="">
-                            </div>
-                            
-                            <div class="description">
-
-                                <h2 id="guest-name">Mejar Kumar</h2>
-                                <div class="about-guest">
-                                    <p>volunteer </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-            
-                </div>
-            </div>
-            <div class="allteambtn">
-                <a href=""><i class="fas fa-border-all"></i> All Team Member</a>
-            </div>
-        </div> -->
-
-        <!-- footer section -->
-        <div class="footer-section flex-row justify-content-around">
-            <div class="row">
-                <div class="col-md-6" style="padding: 30px;">
-                    <div class="h3">Numbers</div>
-                    <div class="row d-flex flex-row justify-content-around">
-                        <div class="col-6">
-                            <div class="teamNumber">
-                                <div class="text-part">
-                                    <div style="font-size: 50px;" class="counter-count">20</div>
-                                    <p>Members</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="guestNumber">
-                                <div class="text-part">
-                                    <div style="font-size: 50px;" class="counter-count">27</div>
-                                    <p>Guests</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6" style="padding: 30px;">
-                    <div class="contact-us-section">
-                        <div class="h3">Contact Us:</div>
-                        <br>
-                        <div class="h5"><i class="fab fa-facebook-square"></i> Facebook</div>
-                        <div class="h5"><i class="fab fa-instagram-square"></i> Instagram</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
-            //check scroll bar is at bottom and add animation if scroll bar is at end
-            $(window).scroll(function () {
-                if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-                    $('.counter-count').each(function () {
-                        $(this).prop('Counter', 0).animate({
-                            Counter: $(this).text()
-                        }, {
-                            duration: 5000,
-                            easing: 'swing',
-                            step: function (now) {
-                                $(this).text(Math.ceil(now));
-                            }
-                        });
-                    });
-                }
-            });
-
-
-        </script>
+        <%- include('./partials/footer'); -%>
 </body>
 
 </html>

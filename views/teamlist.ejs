@@ -1,4 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
 
-     <%- include('./partials/message'); -%>
-     <h2>All the team list</h2>
-     
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>All team member</title>
+     <link rel="stylesheet" href="/css/teamlist.css">
+</head>
+
+<body>
+     <div class="full-screen">
+          <%- include('./partials/message'); -%>
+               <div class="container">
+
+              
+                    <div class="row">
+                         <h2 id="heading">All the team list</h2>
+                         <% items.forEach(function(user){ %>
+                         <div class="col-lg-3 col-md-6 my-2" style="text-align: center;">
+                              <img src="../uploads/<%= user.team_img %>"
+                                   style="height: 150px; width: 150px; border-radius: 75px; text-align:center;" alt="">
+                              <div class="h3 text-center my-2" style="color: #036F31;">
+                                   <h4>
+                                        <%= user.username %>
+                                   </h4>
+                              </div>
+                              <p style="color: #3b5a3b;"><%= user.branch %>  </p>
+                           
+                              <p style="color: #264626; line-height: 0px;"> <%= user.role %></p>
+                         </div>
+                       
+                        <% }) %>  
+                         
+                    </div>
+               </div>
+     </div>
+</body>
+
+</html>
