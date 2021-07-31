@@ -19,6 +19,9 @@ var GuestSchema = new Schema({
     guest_img:{
         type:String,
         required: true
+    },
+    rating:{
+        type: Number
     }
 }); 
 

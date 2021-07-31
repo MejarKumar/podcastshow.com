@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <%- include('./partials/header'); -%>
+
+        <div class="parallex">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+
+                        <h2>Feel the motivation and adventure</h2>
+                        <h1>LIVE TALK ISM</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio reiciendis est
+                            quibusdam
+                            consequatur cumque accusantium, quod modi praesentium similique libero dolores quam porro
+                            minima
+                            sequi blanditiis eveniet voluptatum corporis!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- About Club Section  -->
+
+        <div class="about-us-section">
+            <div class="container pt-2">
+                <div class="h1 title" style="color: #036F31;"><u> About Us</u></div> <br>
+                <div class="contents">
+                    <p>
+                        <strong> LiveTalksISM includes entertainment as well as leaves a roadmap for the young
+                            minds.</strong>
+                        podcast show exclusively for IIT ISM people featuring conversations
+                        with
+                        professors, alumni and students on their life experiences and stories about IIT ISM and also the
+                        audience will be getting to know what are the right things one should do in their college life
+                        to
+                        make it more memorable and useful. This podcast will also feature talk sessions with famous
+                        celebrities and influencers, wherein they get to share some of their amazing life experiences
+                        and learnings.
+                    </p>
+                    <p> As part of our future expansion plan we also plan to identify prevalent issues in society,
+                        advancements in tech, problems of students and do a podcast with relevant experts or
+                        professors.Shortly we plan to launch.founders unfiltered series where we'll be bringing founders
+                        of enterprises from our own college as well as other colleges and engage in a freewheeling chat
+                        about their journey and their stories.</p>
+                    <p> Overall it's supposed to be a free flowing conversation which
+                        offers a mix of <strong>entertainment,
+                            information and inspiration</strong> to our listeners. </p>
+
+                    <!-- <br><br><strong> Our Social Media
+            handles:</strong><br>
+        <div><i class="bi bi-instagram"></i> Instagram - <a
+                href="https://www.instagram.com/_livetalksism_/">@_livetalks_ism</a></div>
+        <div><i class="bi bi-facebook"></i> Facebook - <a
+                href="https://www.facebook.com/livetalksISM/posts">Live Talks ISM</a></div>
+        <div><i class="bi bi-youtube"></i> Youtube - <a
+                href="https://www.youtube.com/channel/UCGXQkO9x8BCkPolMsnzGWqg">LiveTalksISM</a></div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="ltishow-section">
+            <div class="container">
+                <h2 class="heading">Our Popular Show </h2>
+                <div class="row">
+                    <div class="col-lg-4" id="showItem">
+                        <img src="/img/saturaday suspense.jpeg" alt="show pic" id="showImage">
+                    </div>
+                    <div class="col-lg-8" id="showItem">
+                        <h3 id="showName">Saturday Suspense</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, impedit itaque. Magnam iure
+                            ducimus sit, sint, odio hic facere voluptates, aut adipisci architecto distinctio? Similique
+                            quibusdam consectetur voluptatem quidem ut? Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Architecto nam voluptatem nemo nesciunt soluta! Non debitis praesentium
+                            aliquam deserunt nesciunt in animi corporis veniam vel doloremque ducimus obcaecati,
+                            necessitatibus similique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Grid section  -->
+
+        <div class="grid-section">
+
+            <h2 class="heading">Our Recent guests </h2>
+            <div class="container">
+                <div class="row">
+                    <% guestsItem.forEach(function(item){ %>
+                        <div class="col-lg-4" id="guestItems">
+
+                            <div class="box">
+
+
+
+                                <div class="imgBox">
+                                    <img src="../uploads/<%= item.guest_img  %> " alt="guest image">
+                                </div>
+                                <div class="description">
+
+                                    <h2 id="guest-name">
+                                        <%= item.username %>
+                                    </h2>
+                                    <div class="about-guest">
+                                        <p>
+                                            <%= item.profession %>
+                                        </p>
+                                    </div>
+                                    <div class="podcastLink">
+                                        <a href="<%= item.podcastLink  %>"><i class="fas fa-podcast"></i>Watch
+                                            Podcast</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <% }) %>
+                </div>
+
+                <div class="allguestbtn">
+                    <a href=""><i class="fas fa-border-all"></i> All Guests</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- video clip section  -->
+        <div class="video-clip-section">
+            <h2 class="heading" style="    color: currentcolor;">Moments </h2>
+            <div class="row">
+                <div class="col-lg-6" id="VideoItem">
+                    <iframe id="videoClip" width="420" height="345"
+                        src="https://www.youtube.com/embed/cyzCmbhUoZY?autoplay=1&mute=1">
+                    </iframe>
+                </div>
+                <div class="col-lg-6" id="VideoItem">
+                    <iframe style="border-radius: 10px;" width="420" height="345"
+                        src="https://www.youtube.com/embed/biBndDKELm8?autoplay=1&mute=1&loop=1">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- 
+         Team Member section  
+
+        <div class="team-section" style="    background: #0e633e; padding: 3rem;">
+
+            <h2 class="heading">Our Team Member </h2>
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-lg-4" id="teamItems">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="/img/Mejar1.jpg" alt="">
+                            </div>
+                            
+                            <div class="description">
+
+                                <h2 id="guest-name">Mejar Kumar</h2>
+                                <div class="about-guest">
+                                    <p>volunteer </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            <div class="allteambtn">
+                <a href=""><i class="fas fa-border-all"></i> All Team Member</a>
+            </div>
+        </div> -->
+
+
+
+
+        <!-- footer section  -->
+        <div class="footer-section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-side">
+                        <div class="teamNumber">
+                            <i class="fas fa-users"></i>
+                            <div class="text-part">
+                                <p>20</p>
+                                <p>Members</p>
+                            </div>
+                        </div>
+                        <div class="guestNumber">
+                            <img style="width: 13%;" src="/img/man.png" alt="">
+                            <div class="text-part">
+                                <p>27</p>
+                                <p>Guests</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-us-section">
+                        <div class="phone-email">
+                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-instagram-square"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

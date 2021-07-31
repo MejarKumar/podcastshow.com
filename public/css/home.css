@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Open+Sans:wght@300&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Open+Sans:wght@300&family=Oxygen:wght@300&family=PT+Sans&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+/* background: #262626; */
+}
+
+.parallex {
+    font-family: 'PT Sans', sans-serif;
+    background: linear-gradient( 
+135deg
+ , #6c8a1c,hsl(163deg 93% 21% / 78%)),url(/img/mic.jpg) no-repeat center center/cover;
+    min-height: 500px;
+    background-attachment: fixed;
+    color: #f2f9f5;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align:justify;
+}
+.grid-section{
+    background-color:#003638;     
+    padding: 3rem;
+
+}
+
+.heading {
+    display: flex;
+ color: #E8E8E8;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 30px;
+}
+#guestItems , #teamItems{
+text-align: center;
+padding-bottom: 25px;
+}
+
+.container .box{
+    position: relative;
+    height: 220px;
+    width: 220px;
+    /* background: #ff0; */
+    margin: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    
+}
+    .container .box .imgBox{
+       position: relative;
+       overflow: hidden;
+       border-radius: 50%;
+    }
+    .container .box .imgBox img{
+        max-width: 100%;
+        transition: transform 1s;
+        /* border-radius: 20px; */
+       
+    }
+
+  .container .box:hover .imgBox img{
+      transform: scale(1.2);
+      cursor: pointer;
+  }
+  /* .container .box .details{
+      position: absolute;
+top: 10px;
+right: 10px;
+left: 10px;
+bottom: 10px;
+background-color: rgb(19, 13, 11);
+color: rgba(255, 255, 255, 0.541);
+border-radius: 8px;
+transform: scale(0);
+transition: transform .4s;
+
+  }
+  .container .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: system-ui;
+    padding: 10px;
+  
+}
+.container .box .details .content h2{
+    color: rgb(13, 211, 73);
+}
+.container .box .details .content .aboutguest{
+    line-height: 7px;
+    padding-top: 15px;
+}
+.container .box:hover .details{
+    transform: scale(1);
+    cursor: pointer;
+} */
+.about-guest{
+    line-height: 21px;
+    color: cornsilk;
+}
+#guest-name{
+ 
+        color: aliceblue;
+        font-family: 'Oxygen';
+}
+.description{
+   
+        display: block;
+        padding-top: 19px;
+
+}
+.podcastLink {
+    padding: 5px;
+    background-color: #3B5249;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
+.podcastLink a{
+
+        text-decoration: none;
+        color: #FF616D;
+    
+}
+.podcastLink a i{
+    margin-right: 10px;
+}
+.allguestbtn a i{
+    margin-right: 10px;
+}
+
+.podcastLink a:hover{
+    color: #7ae457;
+}
+
+.allguestbtn , .allteambtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.allguestbtn a, .allteambtn a{
+    color: #FF616D;
+    padding: 10px;
+    background-color:#3B5249;
+    text-decoration: none;
+}
+.allguestbtn a:hover, .allteambtn a:hover{
+    color: #7ae457;
+}
+/* aboutus-secton  */
+.about-us-section{
+    background: #E0ECE4;
+    padding: 3rem;
+}
+.contents{
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    word-spacing: 4px;
+    text-align: justify;
+}
+.title{
+    font-family: 'Montserrat', sans-serif;
+ 
+    color: black;
+}
+
+/* club show section  */
+.ltishow-section {
+    background-color: #519872;
+    padding: 3rem;
+    font-family: 'Oxygen', sans-serif;
+}
+#showItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f9fa;
+    flex-direction: column;
+    font-size: larger;
+    /* font-weight: 600; */
+    text-align: justify;
+}
+#showImage {
+    width: 73%;
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 40%);
+}
+#showName {
+    font-size: 39px;
+    font-weight: 600;
+    color: #C7F0DB;
+    padding-bottom: 15px;
+}
+
+
+
+
+/* video-clip-section  */
+.video-clip-section {
+    background: #C9D8B6;
+    padding: 2rem;
+    color: #334257;
+}
+#VideoItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#videoClip{
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@media(max-width:1214px){
+    .container .box .imgBox img {
+        max-width: 80%;
+        transition: transform 1s;
+        border-radius: 20px;
+    }
+    
+}
+@media(max-width:991px){
+    #showImage {
+        width: 50%;
+        border-radius: 20px;
+        box-shadow: 0px 3px 6px rgb(0 0 0 / 40%);
+        margin-bottom: 15px;
+    }
+    
+}
+
+@media (max-width:496px){
+    .about-us-section{
+        padding: 1rem;
+    }
+    #showImage {
+        width: 72%;
+        border-radius: 20px;
+        box-shadow: 0px 3px 6px rgb(0 0 0 / 40%);
+        margin-bottom: 15px;
+    }
+   
+    #showName {
+        font-size: 25px;
+        font-weight: 600;
+        color: #C7F0DB;
+        padding-bottom: 15px;
+        padding-top: 20px;
+    }
+    .grid-section {
+        background-color: #003638;
+        padding: 1rem;
+    }
+    .ltishow-section {
+        background-color: #519872;
+        padding: 1rem;
+        font-family: 'Oxygen', sans-serif;
+    }
+    .container .box:hover .details {
+        transform: scale(1);
+        cursor: pointer;
+        width: 91%;
+        height: 77%;
+    }
+}

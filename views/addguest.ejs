@@ -1,15 +1,48 @@
-<%- include('./partials/header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Guest Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <%- include('./partials/header'); -%>
 
-<div class="container m-3 p-2">
 
+<div class="full-screen">
+    <div class="login-page">
+        <section>
+            <div class="header">
+                <h2>Add Guest Member</h2>
+            </div>
+        </section>
 
-<form action="/admin/addguest" method="POST" enctype="multipart/form-data" >
+        <div class="form-section">
+            <div class="container">
+                <form action="/admin/addguest" method="POST" enctype="multipart/form-data" >
+                    <div class="inputFields">
 
-<input class="form-control" type="text" placeholder="Guest name" name="guestName">
-<input class="form-control" type="text" placeholder="Profession" name="profession">
-<input  class="form-control" type="url" name="podcastLink" id="podcastLink" placeholder="Podcast Link">
-<input  class="form-control" type="file" name="guestImage" id="guestImage" placeholder="Image of Guest">
-<button type="submit" class="btn btn-success">Add Guest</button>
-</form>
+                        <input id="inputName" class="form-control" type="text" placeholder="Guest name" name="guestName">
+                        <input id="inputName" class="form-control" type="text" placeholder="Profession" name="profession">
+                        <input id="inputName" class="form-control" type="url" name="podcastLink" id="podcastLink" placeholder="Podcast Link">
+              
+                        <input id="inputName" class="form-control" type="number" name="guestRating" id="guestRating" placeholder="Rating (out of 10)">
+                        <input id="inputName" class="form-control" type="file" name="guestImage" id="guestImage" placeholder="Image of Guest">
+                    
+                    </div>
+                    <div class="footer">
+                        <button type="submit" class="btn btn-success">Add Guest</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
+    </div>
 </div>
+    
+</body>
+</html>
+
+

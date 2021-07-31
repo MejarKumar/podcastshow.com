@@ -1,16 +1,46 @@
-<%- include('./partials/header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Team Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <%- include('./partials/header'); -%>
 
-<div class="container m-3 p-2">
 
+<div class="full-screen">
+    <div class="login-page">
+        <section>
+            <div class="header">
+                <h2>Add Team Member</h2>
+            </div>
+        </section>
 
-<form action="/admin/addteam" method="POST" enctype="multipart/form-data">
+        <div class="form-section">
+            <div class="container">
+                <form action="/admin/addteam" method="POST" enctype="multipart/form-data">
+                    <div class="inputFields">
 
-<input class="form-control" type="text" placeholder="Team member name" name="nameOfMember">
-<input class="form-control" type="text" placeholder="Role of Member" name="roleOfMember">
-<input type="text" class="form-control" type="text" placeholder="Branch of Member" name="branchOfMember">
-<input type="text" class="form-control" type="text" placeholder="Admission Number" name="admission_number">
-<input  class="form-control" type="file" name="teamImage" id="teamImage" placeholder="Image of team Member">
-<button type="submit" class="btn btn-success">Add Team</button>
-</form>
+                        <input id="inputName" class="form-control" type="text" placeholder="Team member name" name="nameOfMember">
+                        <input id="inputName" class="form-control" type="text" placeholder="Role of Member" name="roleOfMember">
+                        <input id="inputName" type="text" class="form-control" type="text" placeholder="Branch of Member" name="branchOfMember">
+                        <input id="inputName" type="text" class="form-control" type="text" placeholder="Admission Number" name="admission_number">
+                        <input id="inputName"  class="form-control" type="file" name="teamImage" id="teamImage" placeholder="Image of team Member">
+                    </div>
+                    <div class="footer">
+                        <button type="submit" class="btn btn-success">Add Team</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
+    </div>
 </div>
+    
+</body>
+</html>
+
+

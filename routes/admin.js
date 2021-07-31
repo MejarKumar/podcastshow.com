@@ -21,7 +21,7 @@ router.get("/login", (req, res) => {
 })
 
 router.get("/",ensureAuth, (req, res) => {
-   res.render("home")
+   res.render("adminHome")
 })
 router.get("/addguest",ensureAuth, (req, res) => {
    res.render("addguest");

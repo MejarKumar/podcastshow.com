@@ -85,7 +85,8 @@ app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
         username: req.body.guestName,
         profession: req.body.profession,
         podcastLink: req.body.podcastLink,
-        guest_img: req.file.filename
+        guest_img: req.file.filename,
+        rating: req.body.guestRating
     });
     await newGuest.save();
     console.log(newGuest);
@@ -100,7 +101,7 @@ app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
             role: req.body.roleOfMember,
             branch: req.body.branchOfMember,
             admission_number: req.body.admission_number,
-       
+       team_img: req.file.filename
         });
         
         await newTeam.save();
