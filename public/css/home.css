@@ -6,13 +6,21 @@ body{
     margin: 0px;
     padding: 0px;
 /* background: #262626; */
+scroll-behavior: smooth;
 }
-
+#loading{
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+    background: linear-gradient( 
+        135deg
+         , #8de7b78e,#b8cc087d),url(/img/loader.gif) no-repeat center center/cover;
+}
 .parallex {
     font-family: 'PT Sans', sans-serif;
     background: linear-gradient( 
-135deg
- , #6c8a1c,hsl(163deg 93% 21% / 78%)),url(/img/mic.jpg) no-repeat center center/cover;
+        135deg
+         , #2cae69,#3333337d),url(/img/mic.jpg) no-repeat center center/cover;
     min-height: 500px;
     background-attachment: fixed;
     color: #f2f9f5;
@@ -84,17 +92,17 @@ padding-bottom: 25px;
        
     }
 
-  .container .box:hover .imgBox img{
+  /* .container .box:hover .imgBox img{
       transform: scale(1.2);
       cursor: pointer;
   }
- 
+  */
 .about-guest{
     line-height: 21px;
     color: cornsilk;
 }
 #guest-name{
- 
+ font-size: 20px;
         color: aliceblue;
         font-family: 'Oxygen';
 }
@@ -136,7 +144,7 @@ padding-bottom: 25px;
 }
 .allguestbtn a, .allteambtn a{
     color: skyblue;
-    font-weight: 800;
+    font-weight: 500;
     padding: 10px;
     box-shadow: 3px 3px 11px 2px darkolivegreen;
     text-decoration: none;
@@ -203,8 +211,6 @@ padding-bottom: 25px;
 }
 
 
-
-
 /* video-clip-section  */
 .video-clip-section {
     background: #C9D8B6;
@@ -215,12 +221,16 @@ padding-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 #videoClip{
     width: 70%;
-    height: 100%;
+    height: 17rem;
     border-radius: 10px;
 }
+
+
+
 
 @media(max-width:1214px){
     .container .box .imgBox img {
@@ -241,8 +251,19 @@ padding-bottom: 25px;
 }
 
 @media (max-width:496px){
+   .parallex h2, .parallex p{
+        font-size: 16px;
+    }
+
+    .gradient{
+        font-size: 2.5rem;
+    }
+
     .about-us-section{
         padding: 1rem;
+    }
+    .heading{
+        font-size: 25px;
     }
     #showImage {
         width: 72%;
@@ -252,12 +273,17 @@ padding-bottom: 25px;
     }
    
     #showName {
-        font-size: 25px;
+        font-size: 23px;
         font-weight: 600;
         color: #C7F0DB;
         padding-bottom: 15px;
         padding-top: 20px;
     }
+    
+#showPara{
+    font-size: 15px;
+}
+
     .grid-section {
         background-color: #003638;
         padding: 1rem;
@@ -273,4 +299,13 @@ padding-bottom: 25px;
         width: 91%;
         height: 77%;
     }
+    #videoClip{
+        width: 90%;
+        height: 12rem;
+        border-radius: 10px;
+    }
+    .contents p{
+        font-size: 15px;
+    }
+    
 }

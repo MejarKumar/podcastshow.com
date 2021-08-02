@@ -2,10 +2,13 @@
 *{
     padding: 0;
     margin: 0%;
+    scroll-behavior: smooth;
 }
 
 .full-screen{
-    background: #C9E4C5;
+    /* background: #C9E4C5; */
+    /* background: #A7D7C5; */
+    background: #66c5a2;
     min-height: 100vh;
     font-family: 'Georama', sans-serif;
 }

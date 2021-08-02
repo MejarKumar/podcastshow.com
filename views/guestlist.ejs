@@ -37,35 +37,18 @@
                                    </p>
                               </div>
                               <div class="col-lg-9 container">
-                                   <div style=" text-align: justify;">There is no passion to be found playing small-in
-                                        settling for a life that is less than the one you are
-                                        capable of living." A story of an engineer turned filmmaker who is driven by the
-                                        desire of his passion.
-                                        LiveTalksISM had our first guest Ayush Dinker. Ayush is the owner of travel
-                                        films platform Ethereal.
-                                        "A good traveler has no fixed plans and is not intent on arriving." The films
-                                        created at Ethereal are
-                                        travel films (not vlogs!) about a primary human emotion, and the whole narrative
-                                        revolves around
-                                        that concept. Ethereal recently clocked 5.7M views on its YouTube channel and is
-                                        going strong
-                                        further. Ayush has been at the forefront of this endeavour. He shared his
-                                        traveling experiences, life
-                                        changing moments and much much more on the very first episode of
-                                        #SaturdaySuspense. And this
-                                        episode received more than 2000 views
-                                   </div>
+                                   <div style=" text-align: justify;"><%= user.description  %> </div>
                                    <br>
                                    <div class="row">
 
-
+<div class="col-lg-4"><%= user.createdAt  %> </div>
                                         <div class="col-lg-4" id="left-side">
                                              <div class="h5">
                                                   <a id="podcastLink" href="<%= user.podcastLink  %> "><i
                                                             class="fas fa-podcast"></i> Watch Podcast</a>
                                              </div>
                                         </div>
-                                             <div class="col-lg-8" id="right-side">
+                                             <div class="col-lg-4" id="right-side">
                                                   <h5>Follow him</h5>
                                                   <div class="social-icon">
                                                       <a  id="socialLink" href="<%= user.fbLink  %> "><i class="fab fa-facebook-square"></i></a>
@@ -81,6 +64,7 @@
                     </div>
                     <% }); %>
      </div>
+     <%- include('./partials/footer'); -%>
 </body>
 
 </html>

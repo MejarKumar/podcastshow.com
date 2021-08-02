@@ -5,28 +5,38 @@ const Guest = require("../model/guest")
 const Team = require("../model/team")
 router.get("/", async (req, res) => {
 
-    await Guest.find({ rating: "1" }, (err, guestsItem) => {
+    await Guest.find({}, (err, guestsItem) => {
         res.render("guestHome", {
             guestsItem
         })
+    }).sort({createdAt:'desc'}).limit(4);
 
-        // console.log(items)
-    })
-// await Team.find({},(err,teams)=>{   
-//     res.render("guestHome",{teams})
-// })
+
  })
-
-
-router.get("/core_team", (req, res) => {
+router.get("/error",(req,res)=>{
+  res.render("404");
+})
+router.get("/all_team_members", (req, res) => {
    Team.find({},(err,items)=>{
-     res.render("teamlist",{items})
+
+    if(err){
+      console.log(err);
+      res.render("404");
+    }else{
+      res.render("teamlist",{items})
+    }
+
+    
    })
 })
-router.get("/all_guest", (req, res) => {
-  Guest.find({},(err, items)=>{
+router.get("/all_guest", async(req, res) => {
+ await Guest.find({},(err, items)=>{
+  if(err){
+    console.log(err);
+    res.render("404");
+  }else{
     res.render("guestlist",{items})
-  })
+  }}).sort({createdAt: 'desc'}).lean();
 })
 
 

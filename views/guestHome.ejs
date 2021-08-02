@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/css/home.css">
 </head>
 
-<body>
+<body onload="preloadering()">
+<div id="loading"></div>
+
+
     <%- include('./partials/header'); -%>
 
         <div class="parallex">
@@ -79,7 +82,7 @@
                     </div>
                     <div class="col-lg-8" id="showItem">
                         <h3 id="showName">Saturday Suspense</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, impedit itaque. Magnam iure
+                        <p id="showPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, impedit itaque. Magnam iure
                             ducimus sit, sint, odio hic facere voluptates, aut adipisci architecto distinctio? Similique
                             quibusdam consectetur voluptatem quidem ut? Lorem ipsum dolor sit, amet consectetur
                             adipisicing elit. Architecto nam voluptatem nemo nesciunt soluta! Non debitis praesentium
@@ -97,7 +100,7 @@
             <div class="container">
                 <div class="row">
                     <% guestsItem.forEach(function(item){ %>
-                        <div class="col-lg-4" style="padding: 25px;" id="guestItems">
+                        <div class="col-lg-3 col-md-6" style="padding: 25px;" id="guestItems">
                             <div class="box">
                                 <div class="imgBox">
                                     <img src="../uploads/<%= item.guest_img  %> " alt="guest image"  style="height: 150px; width: 150px; border-radius: 75px; text-align:center;">
@@ -120,9 +123,6 @@
                         </div>
                         <% }) %>
                 </div>
-                <!-- <div class="allguestbtn">
-                    <a href=""><i class="fas fa-border-all"></i> All Guests</a>
-                </div> -->
                 <div class="allguestbtn">
                     <a href="/all_guest"><i class="fas fa-border-all"></i> All Guests</a>
                 </div>
@@ -131,7 +131,7 @@
 
         <!-- video clip section  -->
         <div class="video-clip-section">
-            <h2 class="heading" style="    color: currentcolor;">Moments </h2>
+            <h2 class="heading" style="color: currentcolor;">Moments </h2>
             <div class="row">
                 <div class="col-lg-6" id="VideoItem">
                     <iframe id="videoClip" width="420" height="345"
@@ -139,7 +139,7 @@
                     </iframe>
                 </div>
                 <div class="col-lg-6" id="VideoItem">
-                    <iframe style="border-radius: 10px;" width="420" height="345"
+                    <iframe id="videoClip" style="border-radius: 10px;" width="420" height="345"
                         src="https://www.youtube.com/embed/biBndDKELm8?autoplay=0&mute=1&loop=1">
                     </iframe>
                 </div>
@@ -147,6 +147,14 @@
             </div>
         </div>
         <%- include('./partials/footer'); -%>
+
+
+        <script>
+            const loading =document.getElementById("loading");
+           function preloadering(){
+            loading.style.display = 'none';
+           }
+        </script>
 </body>
 
 </html>

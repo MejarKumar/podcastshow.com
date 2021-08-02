@@ -7,8 +7,8 @@
     <title>Admin Login Page</title>
     <link rel="stylesheet" href="/css/login.css">
 </head>
-<body>
- 
+<body onload="preloadering()">
+ <div id="loading"></div>
     <%- include('./partials/header'); -%>
 
 <div class="full-screen">
@@ -43,6 +43,12 @@
     </div>
 </div>
     
+<script>
+    const loading =document.getElementById("loading");
+   function preloadering(){
+    loading.style.display = 'none';
+   }
+</script>
 </body>
 </html>
 

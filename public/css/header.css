@@ -4,14 +4,15 @@
     
 }
 
-.btn{
+.Btn{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: sticky;
     background: #003638;
+    padding: 10px;
 }
-.btn img{
+.Btn img{
     width: 5%;
     border-radius: 50%;
 }
@@ -33,12 +34,13 @@ color: #91C788;
     position: fixed;
     right: 0px;
     top: 0px;
-    width: 100%;
+    width: 0;
     height: 100%;
     background-color: rgb(12, 83, 9);
-    display: none;
+    /* display: none; */
     box-shadow: 2px 2px 2px 4px rgb(112 166 26);
   z-index: 111;
+  transition: ease-in-out .2s;
 }
 
 
@@ -105,19 +107,19 @@ border: none;
 
 
 @media (max-width:978px ){
-    .btn img {
+    .Btn img {
         width: 7%;
         border-radius: 50%;
     }
 }
 @media (max-width:700px ){
-    .btn img {
+    .Btn img {
         width: 9%;
         border-radius: 50%;
     }
 }
 @media (max-width:524px ){
-    .btn img {
+    .Btn img {
         width: 12%;
         border-radius: 50%;
     }

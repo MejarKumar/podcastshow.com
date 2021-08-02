@@ -2,8 +2,9 @@
 *{
     padding: 0;
     margin: 0;
-   
+   scroll-behavior: smooth;
 }
+
 .all-guest-section{
     background-color: #BEE5D3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

@@ -76,10 +76,10 @@ app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
         profession: req.body.profession,
         podcastLink: req.body.podcastLink,
         guest_img: req.file.filename,
-        rating: req.body.guestRating,
+        description: req.body.description,
         fbLink:req.body.fbLink,
         instaLink: req.body.instaLink,
-        linkedinLink: req.body.linkedinLink
+        linkedinLink: req.body.linkedinLink,
     
     });
     await newGuest.save();

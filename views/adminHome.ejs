@@ -1,5 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<%- include('./partials/header'); -%>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.note {
+    background: #2d866c;
+    min-height: fit-content;
+    padding: 2rem;
+    color: #69efc2;
+    font-size: 20px;
+    font-family: 'PT Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        .first-sect {
+            background: #2d866c;
+            min-height: 34.8vh;
+            display: flex;
+            flex-direction: revert;
+            justify-content: center;
+            align-items: center;
+            font-family: 'PT Sans';
+        }
 
-<h2>Welcome to home page admin</h2>
-<a href="/admin/login" class="btn btn-danger">logout</a>
+        #button-section {
+            display: flex;
+            text-align: center;
+        }
+        #listitem{
+            margin: 2rem 0px;
+        }
+
+        #button-section a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            background: greenyellow;
+            padding: 8px;
+            border-radius: 12px;
+            transition: ease .2s;
+        }
+        #button-section a i{
+            margin-right: 8px;
+        }
+        #button-section a:hover {
+            background-color: black;
+            color: #fff;
+        }
+        @media(max-width:778px){
+            #button-section a{
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <%- include('./partials/header'); -%>
+    <div class="note">
+        <marquee width="70%" direction="right" height="30px">
+            <p>Please use a sqare image to upload that would be much better..</p>
+            </marquee>   
+    </div>
+        <div class="first-sect">
+           
+            <div class="container">
+                <div class="row" id="button-section">
+                    <div class="col-lg-3 col-md-6"  id="listitem">
+                        <a href="/admin/addteam"><i class="fas fa-user-plus"></i> Add Team</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6" id="listitem">
+                        <a href="/admin/addguest"><i class="fas fa-user-plus"></i> Add Guest</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6" id="listitem">
+                        <a href="/admin/signup"><i class="fas fa-user-plus"></i> Add Admin</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6" id="listitem">
+                        <a href="/admin/login"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                    </div>
+                  
+                </div>
+               
+            </div>
+        </div>
+      
+
+
+        <%- include('./partials/footer'); -%>
+</body>
+
+</html>

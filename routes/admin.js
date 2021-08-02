@@ -12,7 +12,7 @@ const Team = require("../model/team")
 
 
 
-router.get("/signup", (req, res) => {
+router.get("/signup",ensureAuth, (req, res) => {
     res.render("signup");
 })
 
@@ -30,7 +30,7 @@ router.get("/guestlist",(req,res)=>{
     Guest.find({},(err,items)=>{
         if(items){
             res.render("guestlist", {items})
-            console.log(items);
+            // console.log(items);
         }else{
             res.send("there is no guest till now..")
         }
@@ -49,7 +49,7 @@ router.get("/teamlist",(req,res)=>{
 
 
 
-router.get("/addteam",(req,res)=>{
+router.get("/addteam", ensureAuth,(req,res)=>{
     res.render("addteam")
 })
 
