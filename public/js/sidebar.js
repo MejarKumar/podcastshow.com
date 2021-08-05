@@ -8,3 +8,5 @@ menuBtn.addEventListener("click",()=>{
 cancel.addEventListener("click",()=>{
   sidebar.style.width ="0%";
 })
+
+

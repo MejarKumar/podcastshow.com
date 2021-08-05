@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 const date = require('date-and-time');
 var Schema = mongoose.Schema; 
 const now = new Date();
-date.format(now, 'ddd, MMM DD YYYY'); 
+
 var GuestSchema = new Schema({   
 
     username: {
@@ -35,7 +35,7 @@ var GuestSchema = new Schema({
     },
     createdAt:{
         type:String,
-        default:date.format(now, 'ddd, MMM DD YYYY')
+        default:date.format(now, 'YYYY/MM/DD')
     },
     description:{
         type:String

@@ -5,7 +5,9 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="theme-color" content="#064420" />
      <title>All team member</title>
+     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
      <link rel="stylesheet" href="/css/teamlist.css">
 </head>
 
@@ -14,27 +16,91 @@
           <%- include('./partials/message'); -%>
                <div class="container">
 
-              
+
                     <div class="row">
-                         <h2 id="heading">All the team list</h2>
-                         <% items.forEach(function(user){ %>
-                         <div class="col-lg-3 col-md-6 my-2" style="text-align: center;">
-                              <img src="../uploads/<%= user.team_img %>"
-                                   style="height: 150px; width: 150px; border-radius: 75px; text-align:center;" alt="">
-                              <div class="h3 text-center my-2" style="color: #212529;">
-                                   <h4>
-                                        <%= user.username %>
-                                   </h4>
-                              </div>
-                              <p style="color: #3b5a3b;"><%= user.branch %>  </p>
-                           
-                              <p style="color: #264626; line-height: 0px;"> <%= user.role %></p>
-                         </div>
-                       
-                        <% }) %>  
+                         <h2 id="heading" >All the Core team ( Final Year)</h2>
                          
+                         <% items.forEach(function(user){ %>
+                              <% if (user.role=='Core team' ) { %>
+                              <div class="col-lg-3 col-md-6 my-2" style="text-align: center;">
+                                   <img src="../uploads/<%= user.team_img %>"
+                                        style="height: 150px; width: 150px; border-radius: 75px; text-align:center;"
+                                        alt="">
+                                   <div class="h3 text-center my-2" style="color: #212529;">
+                                        <h4>
+                                             <%= user.username %>
+                                        </h4>
+                                   </div>
+                                   <p style="color: #3b5a3b;">
+                                        <%= user.branch %>
+                                   </p>
+
+                                   <p style="color: #264626; line-height: 0px;">
+                                        <%= user.status %>
+                                   </p>
+                              </div>
+                              <% } %>
+                              <% }) %>
+
                     </div>
                </div>
+
+               <div class="container">
+
+
+                    <div class="row">
+                         <h2 id="heading">All the Pre-final Year</h2>
+                         
+                         <% items.forEach(function(user){ %>
+                              <% if (user.role=='Pre-final' ) { %>
+                              <div class="col-lg-3 col-md-6 my-2" style="text-align: center;">
+                                   <img src="../uploads/<%= user.team_img %>"
+                                        style="height: 150px; width: 150px; border-radius: 75px; text-align:center;"
+                                        alt="">
+                                   <div class="h3 text-center my-2" style="color: #212529;">
+                                        <h4>
+                                             <%= user.username %>
+                                        </h4>
+                                   </div>
+                                   <p style="color: #3b5a3b;">
+                                        <%= user.branch %>
+                                   </p>
+
+                                  
+                              </div>
+                              <% } %>
+                              <% }) %>
+
+                    </div>
+               </div>
+
+
+               <% if (items.role=='Alumni' ) { %>
+               <div class="container">
+                    <div class="row">
+                         <h2 id="heading">All the Alumni</h2>
+                         <% items.forEach(function(user){ %>
+                              <% if (user.role=='Alumni' ) { %>
+                                   <div class="col-lg-3 col-md-6 my-2" style="text-align: center;">
+                                        <img src="../uploads/<%= user.team_img %>"
+                                             style="height: 150px; width: 150px; border-radius: 75px; text-align:center;"
+                                             alt="">
+                                        <div class="h3 text-center my-2" style="color: #212529;">
+                                             <h4>
+                                                  <%= user.username %>
+                                             </h4>
+                                        </div>
+                                        <p style="color: #3b5a3b;">
+                                             <%= user.branch %>
+                                        </p>
+
+                                      
+                                   </div>
+                                   <% } %>
+                            <% }) %>
+                    </div>
+               </div>
+               <% } %>
      </div>
      <%- include('./partials/footer'); -%>
 </body>

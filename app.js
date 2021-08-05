@@ -85,7 +85,7 @@ app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
     await newGuest.save();
     console.log(newGuest);
     
-    res.redirect("/admin/guestlist")
+    res.redirect("/admin")
     
     })
 
@@ -94,14 +94,14 @@ app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
             username: req.body.nameOfMember,
             role: req.body.roleOfMember,
             branch: req.body.branchOfMember,
-            admission_number: req.body.admission_number,
+            status: req.body.status,
        team_img: req.file.filename
         });
         
         await newTeam.save();
         // console.log(newTeam);
-        console.log(req.file);
-        res.redirect("/admin/teamlist")
+        // console.log(req.file);
+        res.redirect("/admin")
         
         })
         

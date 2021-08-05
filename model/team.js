@@ -8,9 +8,9 @@ var TeamSchema = new Schema({
         type: String,
         required:true
     }, 
-    admission_number:{
+    status:{
         type: String,
-        required: true
+        // required: true
     },
     role:{
          type:String,
