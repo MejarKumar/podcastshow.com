@@ -105,7 +105,10 @@ app.post("/admin/addguest",upload.single('guestImage'), async (req,res,next)=>{
         
         })
         
-
-app.listen(3000,(req,res)=>{
-    console.log("the server is running on the port 3000");
+        let port = process.env.PORT;
+        if (port == null || port == "") {
+          port = 8000;
+        }
+app.listen(port,(req,res)=>{
+    console.log("the server is running successfully ");
 })
