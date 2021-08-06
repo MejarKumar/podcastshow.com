@@ -1,4 +1,4 @@
- * {
+* {
     padding: 0px;
     margin: 0px;
     
@@ -12,8 +12,8 @@
     background: #003638;
     padding: 10px;
 }
-.Btn img{
-    width: 5%;
+.Btn a img{
+    width: 7%;
     border-radius: 50%;
 }
 
@@ -108,20 +108,20 @@ border: none;
 
 
 @media (max-width:978px ){
-    .Btn img {
-        width: 7%;
-        border-radius: 50%;
-    }
-}
-@media (max-width:700px ){
-    .Btn img {
+    .Btn a img {
         width: 9%;
         border-radius: 50%;
     }
 }
+@media (max-width:700px ){
+    .Btn a img {
+        width: 8%;
+        border-radius: 50%;
+    }
+}
 @media (max-width:524px ){
-    .Btn img {
-        width: 12%;
+    .Btn a img {
+        width: 10%;
         border-radius: 50%;
     }
     #menuBtn {
