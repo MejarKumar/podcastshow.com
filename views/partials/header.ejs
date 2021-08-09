@@ -20,30 +20,49 @@
 </head>
 <body>
 
-    <div class="Btn">
-        <a href="/">
-            <img src="/img/LOGO-png.png" alt=""></a>
-        <button type="submit" id="menuBtn"><i class="fas fa-align-right"></i></button>
-    </div>
-        <div class="sidebar" >
-        <header> Go To</header>
-            <div class="btn-cancel">
-               <button><i class="fas fa-times" id="cancel"></i>
-               </button>
+    <nav>
+
+
+  
+        <div class="Btn">
+            <a href="/">
+            <img src="/img/LOGO-png.png" alt="">
+        </a>
+            <button type="submit" id="menuBtn"><i class="fas fa-align-right"></i></button>
+            <!-- <div class="navbar-right"> -->
+    <ul class="navItems">
+        <li class="navLink">
+            <a href="/">Dashboard</a>
+        </li>
+        <li class="navLink">
+            <a href="/all_guest">Guests</a>
+        </li>
+        <li class="navLink">
+            <a href="/all_team_members">Members</a>
+        </li>
+        <li class="navLink">
+            <a href="/admin/login">Admin</a>
+        </li>
+    </ul>
+            <!-- </div> -->
         </div>
-            <ul>         
-                <li><a href="/"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-                <li><a href="/all_guest"><i class="fas fa-address-book"></i>Our Guests</a></li>
-                <li><a href="/all_team_members"><i class="fas fa-users"> </i>Team members</a></li>
-                <!-- <li><a href="/"><i class="fas fa-info-circle"></i>About Us</a></li> -->
-                <!-- <li><a href="#"><i class="fas fa-id-card"></i>Contact Us</a></li> -->
-                <li><a href="/admin/login"><i class="fas fa-user-cog"></i> Admin</a></li>
-               
-       
-            </ul>
-        </div>  
-        <!-- <div  style="background-color: cadetblue;"> 
-    </div>   --> 
+            <div class="sidebar" >
+            <header> Go To</header>
+                <div class="btn-cancel">
+                   <button><i class="fas fa-times" id="cancel"></i>
+                   </button>
+            </div>
+                <ul>         
+                    <li><a href="/"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+                    <li><a href="/all_guest"><i class="fas fa-address-book"></i>Our Guests</a></li>
+                    <li><a href="/all_team_members"><i class="fas fa-users"> </i>Team members</a></li>
+                    <li><a href="/admin/login"><i class="fas fa-user-cog"></i> Admin</a></li>
+                   
+           
+                </ul>
+            </div>  
+           
+            </nav>
 <script src="/js/sidebar.js"></script>
 </body>
 </html>
