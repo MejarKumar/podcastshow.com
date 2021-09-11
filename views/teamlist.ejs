@@ -22,7 +22,7 @@
                          
                          <% items.forEach(function(user){ %>
                               <% if (user.role=='Core team' ) { %>
-                              <div class="col-lg-3 col-md-6 my-2" style="text-align: center;">
+                              <div class="col-lg-3 col-md-6 my-2" style="text-align: center;" data-aos="fade-up">
                                    <img src="../uploads/<%= user.team_img %>"
                                         style="height: 150px; width: 150px; border-radius: 75px; text-align:center;"
                                         alt="">
@@ -48,7 +48,7 @@
                <div class="container">
 
 
-                    <div class="row">
+                    <div class="row" data-aos="fade-up">
                          <h2 id="heading">Club Heads - Pre-final Year</h2>
                          
                          <% items.forEach(function(user){ %>
@@ -76,7 +76,7 @@
 
 
                <% if (items.role=='Alumni' ) { %>
-               <div class="container">
+               <div class="container" data-aos="fade-up">
                     <div class="row">
                          <h2 id="heading">All Alumni</h2>
                          <% items.forEach(function(user){ %>

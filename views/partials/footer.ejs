@@ -18,6 +18,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+       
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         .footer-section {
             background: linear-gradient(135deg, #D1F5D3, hsl(163deg 65% 24% / 78%)), url(/img/contact-us.jpg) no-repeat center center/cover;
@@ -85,7 +88,7 @@
 
 
             <div class="row">
-                <div class="col-md-6" style="padding: 30px;">
+                <div class="col-md-6" style="padding: 30px;"  data-aos="fade-right">
                     <!-- <div class="h3">Numbers</div> -->
                     <div class="row justify-content-around">
                         <div class="col-6">
@@ -109,7 +112,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6" style="padding: 30px;">
+                <div class="col-md-6" style="padding: 30px;"   data-aos="fade-left">
                     <div class="contact-us-section">
                         <div class="h3">Contact Us:</div>
                         <p><i class="fas fa-envelope" style="margin-right: 12px;"></i>Livetalksism@gmail.com</p>
@@ -147,7 +150,13 @@
 
 
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 400,
+    delay: 400,
+  });
+</script>
 
 
 

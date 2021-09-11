@@ -20,7 +20,9 @@
         <div class="parallex">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">
 
                         <h2>Feel the motivation and adventure</h2>
                         <h1 class="gradient">LIVE TALK ISM</h1>
@@ -35,9 +37,10 @@
         <!-- About Club Section  -->
 
         <div class="about-us-section" id="about-section">
-            <div class="container ">
+            <div class="container "  >
                 <h2 class="heading" style="color: rgb(10, 82, 4);">Who we are </h2> 
-                <div class="contents">
+                <div class="contents"  data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <p>
                         <strong> LiveTalksISM includes entertainment as well as leaves a roadmap for the young
                             minds.</strong>
@@ -72,7 +75,8 @@
         </div>
 
         <div class="ltishow-section">
-            <div class="container">
+            <div class="container" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
                 <h2 class="heading">Our Popular Show </h2>
                 <div class="row">
                     <div class="col-lg-4" id="showItem">
@@ -93,7 +97,7 @@
 
             <h2 class="heading">Our Recent guests </h2>
             <div class="container">
-                <div class="row">
+                <div class="row"  data-aos="fade-left">
                     <% guestsItem.forEach(function(item){ %>
                         <div class="col-lg-3 col-md-6" style="padding: 25px;" id="guestItems">
                             <div class="box">
@@ -128,12 +132,12 @@
         <div class="video-clip-section">
             <h2 class="heading" style="color: currentcolor;">Moments </h2>
             <div class="row">
-                <div class="col-lg-6" id="VideoItem">
+                <div class="col-lg-6" id="VideoItem" data-aos="fade-right">
                     <iframe id="videoClip" width="420" height="345"
                         src="https://www.youtube.com/embed/cyzCmbhUoZY?autoplay=0&mute=1">
                     </iframe>
                 </div>
-                <div class="col-lg-6" id="VideoItem">
+                <div class="col-lg-6" id="VideoItem" data-aos="fade-left">
                     <iframe id="videoClip" style="border-radius: 10px;" width="420" height="345"
                         src="https://www.youtube.com/embed/biBndDKELm8?autoplay=0&mute=1&loop=1">
                     </iframe>
